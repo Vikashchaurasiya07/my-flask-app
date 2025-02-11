@@ -24,8 +24,8 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t your-dockerhub-username/my-flask-app:latest .
-        docker push your-dockerhub-username/my-flask-app:latest
+        docker build -t vikashchaurasiya07/my-flask-app:latest .
+        docker push vikashchaurasiya07/my-flask-app:latest
 
     - name: Set up kubectl
       uses: azure/setup-kubectl@v1
