@@ -7,6 +7,6 @@ spec:
     app: my-flask-app
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
-  type: LoadBalancer  # This exposes the app outside the cluster
+      port: 80         # Exposed port (external)
+      targetPort: 5000  # The container's internal port
+  type: LoadBalancer
