@@ -26,13 +26,3 @@ jobs:
       run: |
         docker build -t vikashchaurasiya07/my-flask-app:latest .
         docker push vikashchaurasiya07/my-flask-app:latest
-
-    - name: Set up kubectl
-      uses: azure/setup-kubectl@v1
-      with:
-        kubeconfig: ${{ secrets.KUBECONFIG }}
-
-    - name: Deploy to Kubernetes
-      run: |
-        kubectl apply -f kubernetes/deployment.yaml
-        kubectl apply -f kubernetes/service.yaml
